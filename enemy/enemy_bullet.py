@@ -13,7 +13,7 @@ class EnemyBullet(arcade.Sprite):
         self.time = 0
         self.scale = SPRITE_SCALING_LASER
 
-    def on_update(self, dt):
+    def on_update(self, dt: float = 1 / 60):
         self.time += dt
         t = int(self.time * 8)
         t2 = t % 4
